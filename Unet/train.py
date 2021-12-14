@@ -53,11 +53,11 @@ if __name__ == "__main__":
     create_dir("files")
 
     """ Load dataset """
-    train_x = sorted(glob("../new_data/train/image/*"))
-    train_y = sorted(glob("../new_data/train/mask/*"))
+    train_x = sorted(glob("../new_data/train/image/training/images/*"))
+    train_y = sorted(glob("../new_data/train/mask/training/images/*"))
 
-    valid_x = sorted(glob("../new_data/test/image/*"))
-    valid_y = sorted(glob("../new_data/test/mask/*"))
+    valid_x = sorted(glob("../new_data/test/image/test/images/*"))
+    valid_y = sorted(glob("../new_data/test/mask/test/images/*"))
 
     data_str = f"Dataset Size:\nTrain: {len(train_x)} - Valid: {len(valid_x)}\n"
     print(data_str)
