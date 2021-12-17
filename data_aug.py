@@ -25,7 +25,8 @@ def augment_data(images, masks, save_path, augment=True):
 
     for idx, (x, y) in tqdm(enumerate(zip(images, masks)), total=len(images)):
         """ Extracting the name """
-        name = x.split("/")[-1].split(".")[0]
+        name = x.split("\\")[-1].split(".")[0]
+        print(name)
 
         """ Reading image and mask """
         x = cv2.imread(x, cv2.IMREAD_COLOR)
